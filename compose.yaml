@@ -1,0 +1,10 @@
+services:
+  build-minios:
+    build: .
+    image: mini-linux-os-builder:local
+    volumes:
+      - ./buildroot:/workspace/buildroot
+    environment:
+      - FORCE_UNSAFE_CONFIGURE=1
+    stdin_open: true
+    tty: true
